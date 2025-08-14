@@ -5,22 +5,22 @@
 
 <div class="stats shadow mt-5 lg:stats-horizontal w-full">
   <div class="stat">
-    <div class="text-xl text-secondary">Number '1.2-2' de 2 a 2 decimales</div>
+    <div class="text-xl text-accent">Number '1.2-2' de 2 a 2 decimales</div>
     <div class="stat-value">{{ totalSells() | number:'1.2-2' }}</div>
     <div class="stat-desc">{{ totalSells() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Number '1.1-2' de 1 a 2 decimales</div>
+    <div class="text-xl text-accent">Number '1.1-2' de 1 a 2 decimales</div>
     <div class="stat-value">{{ totalSells() + 1234 | number:'1.1-2' }}</div>
     <div class="stat-desc">{{ totalSells() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Currency '1.3-3' de 3 a 3 decimales</div>
+    <div class="text-xl text-accent">Currency '1.3-3' de 3 a 3 decimales</div>
     <div class="stat-value">{{ totalSells() | currency:'CLP':'symbol-narrow':'1.3-3' }}</div>
     <div class="stat-desc">{{ totalSells() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Percent '1.2-2' de 2 a 2 decimales</div>
+    <div class="text-xl text-accent">Percent '1.2-2' de 2 a 2 decimales</div>
     <div class="stat-value">{{ percent() | percent:'1.2-2' }}</div>
     <div class="stat-desc">{{ percent() }}</div>
   </div>

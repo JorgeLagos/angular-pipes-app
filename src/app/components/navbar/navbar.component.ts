@@ -2,7 +2,7 @@ import { Component, inject, LOCALE_ID, signal } from '@angular/core';
 import { routes } from '../../app.routes';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { AvailableLocale } from '../../interfaces/AvailableLocale.interface';
+import { AvailableLocale } from '../../interfaces/available-locale.interface';
 
 import { LocaleService } from '../../services/locale.service';
 

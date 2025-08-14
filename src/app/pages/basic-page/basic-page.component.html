@@ -5,17 +5,17 @@
 
 <div class="stats shadow mt-5 lg:stats-horizontal w-full">
   <div class="stat">
-    <div class="text-xl text-secondary">Lowercase Pipe</div>
+    <div class="text-xl text-accent">Lowercase Pipe</div>
     <div class="stat-value">{{ nameUpper() | lowercase }}</div>
     <div class="stat-desc">{{ nameUpper() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Uppercase Pipe</div>
+    <div class="text-xl text-accent">Uppercase Pipe</div>
     <div class="stat-value">{{ nameLower() | uppercase }}</div>
     <div class="stat-desc">{{ nameLower() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Titlecase Pipe</div>
+    <div class="text-xl text-accent">Titlecase Pipe</div>
     <div class="stat-value">{{ nameFull() | titlecase }}</div>
     <div class="stat-desc">{{ nameFull() }}</div>
   </div>
@@ -25,41 +25,41 @@
 
 <div class="stats shadow lg:stats-horizontal w-full">
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe</div>
+    <div class="text-xl text-accent">Date Pipe</div>
     <div class="stat-value">{{ customDate() | date }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe GMT-3</div>
+    <div class="text-xl text-accent">Date Pipe GMT-3</div>
     <div class="stat-value">{{ customDate() | date:'long':'GMT-3' }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>
 </div>
 <div class="stats shadow lg:stats-horizontal w-full">
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe 'yyyy MM'</div>
+    <div class="text-xl text-accent">Date Pipe 'yyyy MM'</div>
     <div class="stat-value">{{ customDate() | date:'yyyy MM' }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe GMT-4</div>
+    <div class="text-xl text-accent">Date Pipe GMT-4</div>
     <div class="stat-value">{{ customDate() | date:'short':'GMT-4' }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>
 </div>
 <div class="stats shadow lg:stats-horizontal w-full">
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe 'dd/MM/yyyy'</div>
+    <div class="text-xl text-accent">Date Pipe 'dd/MM/yyyy'</div>
     <div class="stat-value">{{ customDate() | date:'dd/MM/yyyy' }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe 'HH:mm:ss'</div>
+    <div class="text-xl text-accent">Date Pipe 'HH:mm:ss'</div>
     <div class="stat-value">{{ customDate() | date:'HH:mm:ss' }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>
   <div class="stat">
-    <div class="text-xl text-secondary">Date Pipe 'EEEE d, MMMM'</div>
+    <div class="text-xl text-accent">Date Pipe 'EEEE d, MMMM'</div>
     <div class="stat-value">{{ customDate() | date:'EEEE d, MMMM' }}</div>
     <div class="stat-desc">{{ customDate() }}</div>
   </div>

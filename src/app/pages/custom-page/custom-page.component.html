@@ -1,4 +1,83 @@
 <section class="mt-5 ml-6">
   <h1 class="text-2xl font-bold">Custom Pipes</h1>
-  <h3 class="text-xl font-thin">Pipes incluidos en angular</h3>
+  <h3 class="text-xl font-thin">Pipes no incluidos en angular</h3>
+</section>
+
+<div class="stats shadow mt-5 lg:stats-horizontal w-full">
+  <div class="stat">
+    <div class="text-xl text-accent">ToggleCasePipe</div>
+    <div class="stat-value">{{ name() | toggleCase: upperCase() }}</div>
+    <div class="stat-desc">{{ name() }}</div>
+    <button class="btn btn-soft btn-accent mt-3" (click)="upperCase.set(!upperCase())">Toggle Case</button>
+  </div>
+  <div class="stat">
+    <div class="flex gap-2 justify-end w-full">Uppercase Pipe</div>
+    <!-- <div class="stat-value">{{ nameLower() | uppercase }}</div> -->
+    <!-- <div class="stat-desc">{{ nameLower() }}</div> -->
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section class="my-2">
+  <div class="stat">
+    <div class="text-xl text-accent">Filtrando por {{ searchQuery() }} y Ordenando por {{ sortBy() }}</div>
+  </div>
+  <div class="flex gap-2 justify-end w-full">
+    <input type="text" class="input input-border w-full max-w-xs" placeholder="Search hero"
+      (input)="searchQuery.set(txtSearch.value)"
+      #txtSearch>
+
+    <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
+      <li>
+        <a (click)="sortBy.set('name')">Por Nombre</a>
+      </li>
+      <li>
+        <a (click)="sortBy.set('canFly')">Por Volador</a>
+      </li>
+      <li>
+        <a (click)="sortBy.set('color')">Por Color</a>
+      </li>
+      <li>
+        <a (click)="sortBy.set('creator')">Por Creador</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="overflow-x-auto w-full mb-10">
+  <table class="table table-sm">
+    <!-- head -->
+    <thead class="text-accent">
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Puede Volar</th>
+        <th>Color</th>
+        <th>Creador</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (hero of heroes() | heroFilter:searchQuery() | heroSortBy:sortBy(); track hero.id; let i = $index) {
+      <tr>
+        <th>{{ i + 1 }}</th>
+        <td>{{ hero.name }}</td>
+        <td>
+          <div class="text-xs badge badge-soft"
+            [class.badge-accent]="hero.canFly"
+            [class.badge-info]="!hero.canFly">
+            {{ hero.canFly | canFly | titlecase }}
+          </div>
+        </td>
+        <td>
+          <div class="text-xs badge badge-soft"
+            [style.color]="hero.color | heroTextColor">
+            {{ hero.color | heroColor | titlecase}}
+          </div>
+        </td>
+        <td>{{ hero.creator | heroCreator }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </section>

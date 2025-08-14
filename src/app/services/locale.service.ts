@@ -1,11 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 
-import { AvailableLocale } from '../interfaces/AvailableLocale.interface';
-
-
-
-
-
+import { AvailableLocale } from '../interfaces/available-locale.interface';
 
 @Injectable({
   providedIn: 'root'
